@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="MachineLearning,">
 
 
 
@@ -105,14 +105,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="Main Challenges of Machine Learning  Bad algorithm Bad data  Bad Data Insufficient Quantity of Training Data In a famous paper published in 2001, Microsoft researchers Michele Banko and Eric Brill sho">
+<meta name="keywords" content="MachineLearning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Main Challenges of Machine Learning">
+<meta property="og:url" content="http://yoursite.com/2019/10/30/Main-Challenges-of-Machine-Learning/index.html">
 <meta property="og:site_name" content="Holen&#39;s Blog">
+<meta property="og:description" content="Main Challenges of Machine Learning  Bad algorithm Bad data  Bad Data Insufficient Quantity of Training Data In a famous paper published in 2001, Microsoft researchers Michele Banko and Eric Brill sho">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-18T01:26:35.045Z">
+<meta property="og:updated_time" content="2019-10-31T03:24:48.403Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="Main Challenges of Machine Learning">
+<meta name="twitter:description" content="Main Challenges of Machine Learning  Bad algorithm Bad data  Bad Data Insufficient Quantity of Training Data In a famous paper published in 2001, Microsoft researchers Michele Banko and Eric Brill sho">
 
 
 
@@ -142,13 +146,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/30/Main-Challenges-of-Machine-Learning/">
 
 
 
 
 
-  <title>categories | Holen's Blog</title>
+  <title>Main Challenges of Machine Learning | Holen's Blog</title>
   
 
 
@@ -273,33 +277,203 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/30/Main-Challenges-of-Machine-Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Holen Zhang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Holen's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">Main Challenges of Machine Learning</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-30T23:24:01-04:00">
+                2019-10-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/10/30/Main-Challenges-of-Machine-Learning/" class="leancloud_visitors" data-flag-title="Main Challenges of Machine Learning">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h3 id="Main-Challenges-of-Machine-Learning"><a href="#Main-Challenges-of-Machine-Learning" class="headerlink" title="Main Challenges of Machine Learning"></a>Main Challenges of Machine Learning</h3><hr>
+<ul>
+<li>Bad algorithm</li>
+<li>Bad data</li>
+</ul>
+<h4 id="Bad-Data"><a href="#Bad-Data" class="headerlink" title="Bad Data"></a>Bad Data</h4><hr>
+<p><strong>Insufficient Quantity of Training Data</strong></p>
+<p>In a famous paper published in 2001, Microsoft researchers Michele Banko and Eric Brill showed that very different Machine Learning algorithms, including fairly simple ones, performed almost identically well on a complex problem of natural language disambiguation once they were given enough data.</p>
+<p><strong>Nonrepresentative Training Data</strong></p>
+<p>It is crucial to use a training set that is representative of the cases we want to generalize to. This is often harder than it sounds: if the sample is too small, we will have <strong><em>sampling noise</em></strong> (i.e., nonrepresentative data as a result of chance), but even very large samples can be nonrepresentative if the sampling method is flawed. This is called <strong><em>sampling bias</em></strong>.</p>
+<p><strong>Poor-Quality Data</strong></p>
+<p>If our training data is full of errors, outliers, and noise (e.g., due to poor-quality measurements), it will make it harder for the system to detect the underlying patterns, so our system is less likely to perform well. </p>
+<p>Some data cleaning examples:</p>
+<ul>
+<li>If some instances are clearly outliers, it may help to simply discard them or try to fix the errors manually.</li>
+<li>If some instances are missing a few features (e.g., 5% of our customers did not specify their age), we must decide whether we want to ignore this attribute altogether, ignore these instances, fill in the missing values (e.g., with the median age), or train one model with the feature and one model without it, and so on.</li>
+</ul>
+<p><strong>Irrelevant Features</strong></p>
+<p>Our system will only be capable of learning if the training data contains enough relevant features and not too many irrelevant ones. A critical part of the success of a Machine Learning project is coming up with a good set of features to train on. This process, called <strong><em>feature engineerin</em></strong>g, involves:</p>
+<ul>
+<li><p>Feature selection: selecting the most useful features to train on among existing features.</p>
+</li>
+<li><p>Feature extraction: combining existing features to produce a more useful one (as we saw earlier, dimensionality reduction algorithms can help).</p>
+</li>
+<li><p>Creating new features by gathering new data.</p>
+</li>
+</ul>
+<h4 id="Bad-Algorithms"><a href="#Bad-Algorithms" class="headerlink" title="Bad Algorithms"></a>Bad Algorithms</h4><hr>
+<p><strong>Overfitting the Training Data</strong></p>
+<p>In machine learning, overfitting means that the model performs well on the training data, but it does not generalize well. Complex models such as deep neural networks can detect subtle patterns in the data, but if the training set is noisy, or if it is too small (which introduces sampling noise), then the model is likely to detect patterns in the noise itself and obviously these patterns will not generalize to new instances. The model has no way to tell whether a pattern is real or simply the result of noise in the data.</p>
+<p>Overfitting happens when the model is too complex relative to the amount and noisiness of the training data. The possible solutions are:</p>
+<ul>
+<li>To simplify the model by selecting one with fewer parameters (e.g., a linear model rather than a high-degree polynomial model), by reducing the number of attributes in the training data or by constraining the model.</li>
+<li>To gather more training data.</li>
+<li>To reduce the noise in the training data (e.g., fix data errors and remove outliers).</li>
+</ul>
+<p>Constraining a model to make it simpler and reduce the risk of overfitting is called <strong><em>regularization</em></strong>.</p>
+<p>The amount of regularization to apply during learning can be controlled by a <strong><em>hyperparameter</em></strong>. A hyperparameter is a parameter of a learning algorithm (not of the model). As such, it is not affected by the learning algorithm itself; it must be set prior to training and remains constant during training. Tuning hyperparameters is an important part of building a Machine Learning system.</p>
+<p><strong>Underfitting the Training Data</strong></p>
+<p>Underfitting is the opposite of overfitting: it occurs when our model is too simple to learn the underlying structure of the data. For example, a linear model of life satisfaction is prone to underfit; reality is just more complex than the model, so its predictions are bound to be inaccurate, even on the training examples.</p>
+<p>The main options to fix this problem are:</p>
+<ul>
+<li><p>Selecting a more powerful model, with more parameters.</p>
+</li>
+<li><p>Feeding better features to the learning algorithm (feature engineering).</p>
+</li>
+<li><p>Reducing the constraints on the model (e.g., reducing the regularization hyperparameter).</p>
+</li>
+</ul>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MachineLearning/" rel="tag"># MachineLearning</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/30/Types-of-Machine-Learning-Systems/" rel="next" title="Types of Machine Learning Systems">
+                <i class="fa fa-chevron-left"></i> Types of Machine Learning Systems
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -332,8 +506,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -408,6 +591,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Main-Challenges-of-Machine-Learning"><span class="nav-number">1.</span> <span class="nav-text">Main Challenges of Machine Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Bad-Data"><span class="nav-number">1.1.</span> <span class="nav-text">Bad Data</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Bad-Algorithms"><span class="nav-number">1.2.</span> <span class="nav-text">Bad Algorithms</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
