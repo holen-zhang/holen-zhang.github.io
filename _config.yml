@@ -23,7 +23,7 @@ paginate_path: "/page:num/"
 # Author profile (shown on the homepage left side)
 author:
   name: Haonan Zhang
-  avatar: "/assets/images/profile.jpg"
+  avatar: "/assets/images/profile.jpeg"
   bio: "PhD student • Software Engineering"
   location: "Canada"
   links:
