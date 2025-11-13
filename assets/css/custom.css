@@ -1,0 +1,19 @@
+/* 1) Hide the big "Home" text on the hero (only on the homepage) */
+.home-hero .page__title { display: none; }
+
+/* 2) Make the hero taller */
+.home-hero .page__hero--overlay {
+  min-height: 420px;                /* tweak to taste (e.g., 480px) */
+}
+@media (min-width: 768px) {
+  .home-hero .page__hero--overlay { min-height: 520px; }
+}
+
+/* 3) Bigger, rectangular profile photo */
+.author__avatar img {
+  width: 140px;                     /* increase size; try 160px/180px if you like */
+  max-width: none;
+  border-radius: 0;                 /* 0 = sharp rectangle; use 8px for rounded corners */
+}
+
+.author__name { font-size: 1.2rem; }
