@@ -5,7 +5,7 @@ seo_title: "Haonan Zhang’s web home"
 author_profile: true
 classes: wide
 header:
-  overlay_image: /assets/images/hero.jpg
+  overlay_image: /assets/images/hero.jpeg
   overlay_filter: 0.2
   caption: "Waterloo Park"
 ---
