@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Home"
+seo_title: "Haonan Zhang’s web home"
 author_profile: true
 classes: wide
 header:
