@@ -1,0 +1,54 @@
+title: Haonan Zhang
+name: Haonan Zhang
+description: University of Waterloo
+url: https://holen-zhang.github.io
+
+remote_theme: "mmistakes/minimal-mistakes@latest"
+
+# Theme options
+minimal_mistakes_skin: default
+locale: en
+markdown: kramdown
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+
+paginate: 5
+paginate_path: "/page:num/"
+
+# Author profile (shown on the homepage left side)
+author:
+  name: Haonan Zhang
+  avatar: "/assets/images/profile.jpg"
+  bio: "PhD student • Software Engineering"
+  location: "Canada"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/holen-zhang"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter"
+      url: "https://twitter.com/haonan_zhang24"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/haonan-zhang-1186061b9/"
+    - label: "Google Scholar"
+      icon: "ai ai-google-scholar"
+      url: "https://scholar.google.com/citations?authuser=1&user=JLFoe7AAAAAJ" #
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:haonan.zhang@uwaterloo.ca"
+
+# Defaults so pages use Minimal Mistakes layouts nicely
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      classes: wide
+      sidebar:
+        nav: "main"
