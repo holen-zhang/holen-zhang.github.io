@@ -37,7 +37,7 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/haonan-zhang-1186061b9/"
     - label: "Google Scholar"
-      icon: "ai ai-google-scholar"
+      icon: "fas fa-graduation-cap"
       url: "https://scholar.google.com/citations?authuser=1&user=JLFoe7AAAAAJ" #
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
