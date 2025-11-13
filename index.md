@@ -7,7 +7,7 @@ classes: [wide, home-hero]
 header:
   overlay_image: /assets/images/hero.jpeg
   overlay_filter: 0
-  caption: "Waterloo Park"
+  caption: "Mont-Tremblant"
 ---
 
 ## About Me
