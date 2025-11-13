@@ -3,8 +3,8 @@ name: Haonan Zhang
 description: University of Waterloo
 url: https://holen-zhang.github.io
 
-theme: minimal-mistakes-jekyll
-# remote_theme: "mmistakes/minimal-mistakes@latest"
+# theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@latest"
 
 # Theme options
 minimal_mistakes_skin: default
