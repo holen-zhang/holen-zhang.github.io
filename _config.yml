@@ -12,7 +12,7 @@ locale: en
 markdown: kramdown
 
 plugins:
-  - jekyll-remote-theme
+  # - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
