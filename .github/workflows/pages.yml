@@ -3,28 +3,27 @@ on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/configure-pages@v5
+
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-      - run: |
-          gem install bundler jekyll
-          bundle init
-          echo 'gem "jekyll", "~> 4.3"' >> Gemfile
-          echo 'gem "jekyll-remote-theme"' >> Gemfile
-          echo 'gem "jekyll-paginate"' >> Gemfile
-          echo 'gem "jekyll-sitemap"' >> Gemfile
-          echo 'gem "jekyll-feed"' >> Gemfile
-          bundle install
-          bundle exec jekyll build -d _site
+          bundler-cache: true   # caches gems
+
+      - run: bundle install
+      - run: bundle exec jekyll build -d _site
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+
   deploy:
     needs: build
     permissions:
