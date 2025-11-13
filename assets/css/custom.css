@@ -14,6 +14,16 @@
   width: 140px;                     /* increase size; try 160px/180px if you like */
   max-width: none;
   border-radius: 0;                 /* 0 = sharp rectangle; use 8px for rounded corners */
+  filter: none !important;
+  opacity: 1 !important;
 }
 
 .author__name { font-size: 1.2rem; }
+
+.page__sidebar .author__urls li a,
+.page__sidebar .author__urls li a i {
+  color: #2a7ae2 !important;   
+  opacity: 1 !important;
+  text-decoration: none;
+  font-weight: 500;            
+}
