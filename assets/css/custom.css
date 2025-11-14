@@ -36,8 +36,8 @@ html { scroll-behavior: smooth; }
 /* Taller hero */
 .home-hero .page__hero--overlay {
   min-height: 420px;
-  /* Do NOT add top margin here; the page is already offset by .initial-content */
-  margin-top: 0;
+  /* Add padding to push hero *content* (caption) below the fixed header */
+  padding-top: var(--masthead-h);
 }
 @media (min-width: 768px) {
   .home-hero .page__hero--overlay { min-height: 520px; }
