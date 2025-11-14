@@ -15,7 +15,7 @@ plugins:
   # - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-feed
+  # - jekyll-feed
 
 paginate: 5
 paginate_path: "/page:num/"
@@ -53,3 +53,9 @@ defaults:
       classes: wide
       # sidebar:
       #   nav: "main"
+
+kramdown:
+  footnote_backlink: ""
+
+
+
