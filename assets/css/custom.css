@@ -9,6 +9,17 @@
   .home-hero .page__hero--overlay { min-height: 520px; }
 }
 
+/* Bigger site title in the masthead */
+.site-title {
+  font-size: 1.6rem;        /* tweak to taste */
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+@media (min-width: 768px) {
+  .site-title { font-size: 2rem; }
+}
+
+
 /* 3) Bigger, rectangular profile photo */
 .author__avatar img {
   width: 140px;                     /* increase size; try 160px/180px if you like */
