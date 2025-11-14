@@ -34,6 +34,20 @@
   opacity: 1;
 }
 
+/* Keep the top nav visible while scrolling */
+.masthead {
+  position: fixed;         
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;            /* above hero image/content */
+  background: rgba(255,255,255,.92);  /* solid/opaque so text stays readable */
+  backdrop-filter: saturate(180%) blur(8px);  /* optional glassy feel */
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);      /* subtle separation */
+}
+
+.site-content { padding-top: 80px; }
+
 /* Smooth scroll between sections */
 html { scroll-behavior: smooth; }
 
