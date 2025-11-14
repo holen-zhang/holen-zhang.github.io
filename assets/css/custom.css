@@ -18,7 +18,7 @@
 
 .author__name { font-size: 1.2rem; }
 
-.author__avatar,
-.author__links a {
+.author__avatar, .author__content,
+.author__urls.social-icons a {
   opacity: 1;
 }
