@@ -8,6 +8,8 @@ header:
   overlay_image: /assets/images/hero.jpeg
   overlay_filter: 0
   caption: "Mont-Tremblant"
+footer_scripts:
+  - /assets/js/scrollspy.js
 ---
 
 <div id="home"></div>
@@ -18,7 +20,6 @@ I am a PhD candidate in Software Engineering at the [University of Waterloo](htt
 
 In addition to my research, I am a research intern at [ERA Environmental Software Solutions](https://www.era-environmental.com/). My work there involves projects related to Playwright/Selenium test generation and repair, LLM-based web agents, and CI pipelines.
 
----
 
 ## Publications {#publications}
 ### 2025
@@ -28,15 +29,12 @@ In addition to my research, I am a research intern at [ERA Environmental Softwar
 - **Paper Title**. *Venue*, 2024. [PDF](#)
 
 
----
-
 ## Service {#service}
 - Program Committee: ASE 2025, ICSE 2024 (AE), …
 - Journal Reviewer: TOSEM, TSE, …
 - Conference Reviewer: ASE, ICSE, FSE, …
 - Teaching: TA/Guest lectures for … 
 
----
 
 ## Awards {#awards}
 - Best Paper Award, XYZ 2024  
