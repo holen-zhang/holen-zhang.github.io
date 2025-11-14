@@ -31,8 +31,9 @@ Hanying Shao, Zishuo Ding, Kundi Yao, **Haonan Zhang**, and Weiyi Shang. Improvi
 
 **Haonan Zhang**, Yiming Tang, Maxime Lamothe, Heng Li, and Weiyi Shang. Studying Logging Practice in Test Code. Empirical Software Engineering (EMSE 2022). [LINK](https://link.springer.com/article/10.1007/s10664-022-10139-0)
 
-Julian Harty, **Haonan Zhang**, Lili Wei, Luca Pascarella, Maurício Aniche, and Weiyi Shang. Logging Practices with Mobile Analytics: An Empirical Study on Firebase. The 8th IEEE/ACM International Conference on Mobile Software Engineering and Systems (MOBILESoft 2021). [LINK](https://ieeexplore.ieee.org/abstract/document/9460930)
+Julian Harty[^equal], **Haonan Zhang[^equal]**, Lili Wei, Luca Pascarella, Maurício Aniche, and Weiyi Shang. Logging Practices with Mobile Analytics: An Empirical Study on Firebase. The 8th IEEE/ACM International Conference on Mobile Software Engineering and Systems (MOBILESoft 2021). [LINK](https://ieeexplore.ieee.org/abstract/document/9460930)
 
+[^equal]: Contributed equally to the work.
 
 ## Service {#service}
 - Program Committee: ASE 2025, ICSE 2024 (AE), …
