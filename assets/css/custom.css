@@ -84,7 +84,15 @@ body.home-hero.is-scrolled .masthead {
 .site-title { font-size: 1.6rem; font-weight: 700; letter-spacing: .2px; }
 @media (min-width: 768px) { .site-title { font-size: 2rem; } }
 
-.author__avatar img { width: 140px; max-width: none; border-radius: 0; filter: none !important; -webkit-filter: none !important; opacity: 1 !important; }
+/* .author__avatar img { width: 140px; max-width: none; border-radius: 0; filter: none !important; -webkit-filter: none !important; opacity: 1 !important; } */
+.author__avatar img {
+  width: auto !important;        /* let theme control actual size */
+  max-width: 120px !important;   /* MM default avatar size */
+  border-radius: 50% !important; /* circle */
+  filter: initial !important;    /* remove forced 'none' */
+  -webkit-filter: initial !important;
+  opacity: initial !important;   /* remove forced 1 */
+}
 .author__name { font-size: 1.2rem; }
 .author__avatar, .author__content, .author__urls.social-icons a { opacity: 1; }
 
