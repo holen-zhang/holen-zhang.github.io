@@ -35,9 +35,12 @@ body:not(.home-hero) .initial-content { padding-top: var(--masthead-h); }
 
 /* HOME page at top: transparent header, no page padding */
 body.home-hero .masthead {
-  background: transparent;
+  /* background: transparent;
   backdrop-filter: none;
-  box-shadow: none;
+  box-shadow: none; */
+  background: rgba(255,255,255,.35);
+  backdrop-filter: saturate(180%) blur(6px);
+  box-shadow:none;
 }
 body.home-hero .initial-content { padding-top: 0 !important; }
 
@@ -114,7 +117,7 @@ body.home-hero.is-scrolled .masthead {
 .masthead .site-title,
 .masthead .site-title a,
 .masthead .masthead__menu-item a {
-  color: #222222 !important; /* dark grey */
+  color: #1f2937 !important; /* dark grey */
 }
 
 /* Hover/active just a touch darker (optional) */
