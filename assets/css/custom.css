@@ -1,68 +1,86 @@
 /* ---------------------------
-   0) Global variables (header height per breakpoint)
-   --------------------------- */
-:root { --masthead-h: 64px; }                         /* phones */
-@media (min-width: 768px)  { :root { --masthead-h: 76px; } }   /* tablets */
-@media (min-width: 1024px) { :root { --masthead-h: 92px; } }   /* desktops */
+   0) Global variables (header height per breakpoint)
+   --------------------------- */
+:root { --masthead-h: 64px; }                         /* phones */
+@media (min-width: 768px)  { :root { --masthead-h: 76px; } }   /* tablets */
+@media (min-width: 1024px) { :root { --masthead-h: 92px; } }   /* desktops */
 
 /* ---------------------------
-   1) Fixed masthead (always visible)
-   --------------------------- */
+   1) Fixed masthead (transparent-to-solid)
+   --------------------------- */
+
+/* Default state: Transparent, floating over the hero */
 .masthead {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1000;                         /* above hero/content */
-  background: rgba(255, 255, 255, 0.92); /* keep text readable */
-  backdrop-filter: saturate(180%) blur(8px); /* optional glass effect */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+  /* Add a smooth transition for when we scroll */
+  transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-html { scroll-behavior: smooth; }
-body { padding-top: var(--masthead-h); }
+/* Scrolled state: Solid white background */
+.masthead.is-scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* On non-hero pages, we still need to push content down */
+body:not(.home-hero) .initial-content {
+  padding-top: var(--masthead-h);
+}
 
 /* Anchor jumps land below the fixed header */
 [id] { scroll-margin-top: calc(var(--masthead-h) + 8px ); }
 
+/* Smooth scrolling between sections */
+html { scroll-behavior: smooth; }
+
 /* ---------------------------
-   2) Hero (homepage)
-   --------------------------- */
+   2) Hero (homepage)
+   --------------------------- */
 
 /* Hide the big "Home" title on the hero */
 .home-hero .page__title { display: none; }
 
 /* Taller hero */
 .home-hero .page__hero--overlay {
-  min-height: 420px;
-  /* We are using .initial-content, so we MUST kill any default
-     top margin to prevent a "double gap" */
-  margin-top: 0 !important;
+  min-height: 420px;
+  /* Remove any default margin */
+  margin-top: 0 !important;
+  /* THIS IS THE FIX: Push hero content (caption) down */
+  padding-top: var(--masthead-h);
+  box-sizing: border-box; /* Include padding in height */
 }
 @media (min-width: 768px) {
-  .home-hero .page__hero--overlay { min-height: 520px; }
+  .home-hero .page__hero--overlay { min-height: 520px; }
 }
 
 /* ---------------------------
-   3) Masthead typography (site title)
-   --------------------------- */
+   3) Masthead typography (site title)
+   --------------------------- */
 .site-title {
-  font-size: 1.6rem;  /* tweak to taste */
-  font-weight: 700;
-  letter-spacing: 0.2px;
+  font-size: 1.6rem;  /* tweak to taste */
+  font-weight: 700;
+  letter-spacing: 0.2px;
 }
 @media (min-width: 768px) {
-  .site-title { font-size: 2rem; }
+  .site-title { font-size: 2rem; }
 }
 
 /* ---------------------------
-   4) Author card (avatar, name, links)
-   --------------------------- */
+   4) Author card (avatar, name, links)
+   --------------------------- */
 .author__avatar img {
-  width: 140px;        /* try 160/180 if you want larger */
-  max-width: none;
-  border-radius: 0;    /* 0 = sharp rectangle; e.g., 8px for subtle rounding */
-  filter: none !important;    /* ensure not greyscaled by theme */
-  -webkit-filter: none !important;
-  opacity: 1 !important;      /* ensure not dimmed by theme */
+  width: 140px;        /* try 160/180 if you want larger */
+  max-width: none;
+  border-radius: 0;    /* 0 = sharp rectangle; e.g., 8px for subtle rounding */
+  filter: none !important;    /* ensure not greyscaled by theme */
+  -webkit-filter: none !important;
+  opacity: 1 !important;      /* ensure not dimmed by theme */
 }
 
 .author__name { font-size: 1.2rem; }
@@ -71,23 +89,18 @@ body { padding-top: var(--masthead-h); }
 .author__avatar,
 .author__content,
 .author__urls.social-icons a {
-  opacity: 1;
+  opacity: 1;
 }
 
 /* ---------------------------
-   5) Top nav active state (when scrollspy marks a link)
-   --------------------------- */
+   5) Top nav active state (when scrollspy marks a link)
+   --------------------------- */
 .masthead__menu-item a.is-active {
-  border-bottom: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
 }
 
 /* ---------------------------
-   6) Minor spacing guardrails
-   --------------------------- */
+   6) Minor spacing guardrails
+   --------------------------- */
 /* Prevent stray top margin from reintroducing gaps at the top of pages */
 .page__content > *:first-child { margin-top: 0; }
-
-/* Ensure page headers never collide with the fixed masthead */
-.page__hero, .page__title, .page__meta {
-  scroll-margin-top: calc(var(--masthead-h) + 8px);
-}
