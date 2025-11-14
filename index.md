@@ -19,19 +19,19 @@ In addition to my research, I am a research intern at [ERA Environmental Softwar
 
 ## Publications {#publications}
 
-**Haonan Zhang**, Kundi Yao, Zishuo Ding, Lizhi Liao, and Weiyi Shang. _Who's to Blame? Rethinking the Brittleness of Automated Web GUI Testing from a Pragmatic Perspective._ The 40th IEEE/ACM International Conference on Automated Software Engineering (ASE 2025). Accepted.
+**Haonan Zhang**, Kundi Yao, Zishuo Ding, Lizhi Liao, and Weiyi Shang. Who's to Blame? Rethinking the Brittleness of Automated Web GUI Testing from a Pragmatic Perspective. The 40th IEEE/ACM International Conference on Automated Software Engineering (ASE 2025). Accepted.
 
-An Chen, Kundi Yao, **Haonan Zhang**, Yiming Tang, and Weiyi Shang. _An Empirical Study of Logging Practice in CUDA-based Deep Learning Systems._ The 25th IEEE International Conference on Software Quality, Reliability, and Security (QRS 2025). [LINK](https://ieeexplore.ieee.org/document/11173505)
+An Chen, Kundi Yao, **Haonan Zhang**, Yiming Tang, and Weiyi Shang. An Empirical Study of Logging Practice in CUDA-based Deep Learning Systems. The 25th IEEE International Conference on Software Quality, Reliability, and Security (QRS 2025). [LINK](https://ieeexplore.ieee.org/document/11173505)
 
-Hanying Shao, Zishuo Ding, Kundi Yao, **Haonan Zhang**, and Weiyi Shang. _Improving QA System Testing Efficiency Through White-Box Test Prioritization._ The 25th IEEE International Conference on Software Quality, Reliability, and Security (QRS 2025). [LINK](https://ieeexplore.ieee.org/document/11173507)
+Hanying Shao, Zishuo Ding, Kundi Yao, **Haonan Zhang**, and Weiyi Shang. Improving QA System Testing Efficiency Through White-Box Test Prioritization. The 25th IEEE International Conference on Software Quality, Reliability, and Security (QRS 2025). [LINK](https://ieeexplore.ieee.org/document/11173507)
 
-**Haonan Zhang**. _On the Brittleness of Legacy Web UI Testing: A Pragmatic Perspective._ The 34th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA 2025), ISSTA Companion. [LINK](https://dl.acm.org/doi/abs/10.1145/3713081.3731742)
+**Haonan Zhang**. On the Brittleness of Legacy Web UI Testing: A Pragmatic Perspective. The 34th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA 2025), ISSTA Companion. [LINK](https://dl.acm.org/doi/abs/10.1145/3713081.3731742)
 
-**Haonan Zhang**, Lizhi Liao, Zishuo Ding, Weiyi Shang, Nidhi Narula, Catalin Sporea, Andrei Toma, and Sarah Sajedi. _Towards a Robust Waiting Strategy for Web GUI Testing for an Industrial Software System._ The 39th IEEE/ACM International Conference on Automated Software Engineering (ASE 2024), Industry track. [LINK](https://dl.acm.org/doi/abs/10.1145/3691620.3695269)
+**Haonan Zhang**, Lizhi Liao, Zishuo Ding, Weiyi Shang, Nidhi Narula, Catalin Sporea, Andrei Toma, and Sarah Sajedi. Towards a Robust Waiting Strategy for Web GUI Testing for an Industrial Software System. The 39th IEEE/ACM International Conference on Automated Software Engineering (ASE 2024), Industry track. [LINK](https://dl.acm.org/doi/abs/10.1145/3691620.3695269)
 
-**Haonan Zhang**, Yiming Tang, Maxime Lamothe, Heng Li, and Weiyi Shang. _Studying Logging Practice in Test Code._ Empirical Software Engineering (EMSE 2022). [LINK](https://link.springer.com/article/10.1007/s10664-022-10139-0)
+**Haonan Zhang**, Yiming Tang, Maxime Lamothe, Heng Li, and Weiyi Shang. Studying Logging Practice in Test Code. Empirical Software Engineering (EMSE 2022). [LINK](https://link.springer.com/article/10.1007/s10664-022-10139-0)
 
-Julian Harty[^equal], **Haonan Zhang**[^equal], Lili Wei, Luca Pascarella, Maurício Aniche, and Weiyi Shang. _Logging Practices with Mobile Analytics: An Empirical Study on Firebase._ The 8th IEEE/ACM International Conference on Mobile Software Engineering and Systems (MOBILESoft 2021). [LINK](https://ieeexplore.ieee.org/abstract/document/9460930)
+Julian Harty[^equal], **Haonan Zhang**[^equal], Lili Wei, Luca Pascarella, Maurício Aniche, and Weiyi Shang. Logging Practices with Mobile Analytics: An Empirical Study on Firebase. The 8th IEEE/ACM International Conference on Mobile Software Engineering and Systems (MOBILESoft 2021). [LINK](https://ieeexplore.ieee.org/abstract/document/9460930)
 
 [^equal]: Contributed equally to the work.
 
