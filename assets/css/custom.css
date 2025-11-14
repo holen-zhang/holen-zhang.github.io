@@ -33,3 +33,14 @@
 .author__urls.social-icons a {
   opacity: 1;
 }
+
+/* Smooth scroll between sections */
+html { scroll-behavior: smooth; }
+
+/* When jumping to an anchor, keep it visible under the fixed masthead */
+[id] { scroll-margin-top: 80px; }   /* adjust if your header height differs */
+
+/* Optional: a visible "active" state for the top links */
+.masthead__menu-item a.is-active {
+  border-bottom: 2px solid currentColor;
+}
