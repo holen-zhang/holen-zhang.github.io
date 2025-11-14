@@ -110,3 +110,24 @@ body.home-hero.is-scrolled .masthead {
   box-shadow: none !important;
 }
 
+/* Masthead text color: dark */
+.masthead .site-title,
+.masthead .site-title a,
+.masthead .masthead__menu-item a {
+  color: #222222 !important; /* dark grey */
+}
+
+/* Hover/active just a touch darker (optional) */
+.masthead .masthead__menu-item a:hover,
+.masthead .masthead__menu-item a.is-active {
+  color: #111111 !important;
+  border-bottom-color: currentColor;
+}
+
+/* Make the hamburger bars match the text color */
+.greedy-nav__toggle .navicon,
+.greedy-nav__toggle .navicon:before,
+.greedy-nav__toggle .navicon:after {
+  background: #222222 !important;
+}
+
