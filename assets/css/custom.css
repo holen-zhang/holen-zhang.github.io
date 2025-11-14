@@ -9,28 +9,49 @@
    1) Fixed masthead (transparent-to-solid)
    --------------------------- */
 
-/* Default state: Transparent, floating over the hero */
+/* Base styles for all pages */
 .masthead {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: transparent;
-  backdrop-filter: none;
-  box-shadow: none;
-  /* Add a smooth transition for when we scroll */
-  transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  /* Add a smooth transition for when we scroll */
+  transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-/* Scrolled state: Solid white background */
-.masthead.is-scrolled {
+/* 1. STYLES FOR NON-HOME PAGES:
+   Masthead is solid white */
+body:not(.home-hero) .masthead {
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: saturate(180%) blur(8px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-/* On non-hero pages, we still need to push content down */
+/* 2. STYLES FOR HOME PAGE (at top):
+   Masthead is transparent */
+body.home-hero .masthead {
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+/* 3. STYLES FOR HOME PAGE (scrolled):
+   Masthead becomes solid white */
+body.home-hero .masthead.is-scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* 4. CONTENT PADDING (FIXES GAP/OVERLAP): */
+
+/* On non-hero pages, push all content down */
 body:not(.home-hero) .initial-content {
   padding-top: var(--masthead-h);
+}
+
+/* On the home page, REMOVE the top padding to kill the "gap" */
+body.home-hero .initial-content {
+  padding-top: 0;
 }
 
 /* Anchor jumps land below the fixed header */
@@ -48,15 +69,17 @@ html { scroll-behavior: smooth; }
 
 /* Taller hero */
 .home-hero .page__hero--overlay {
-  min-height: 420px;
-  /* Remove any default margin */
+  /* Make hero taller (e.g., 70% of viewport height) */
+  min-height: 70vh;
+  /* Remove any default margin */
   margin-top: 0 !important;
-  /* THIS IS THE FIX: Push hero content (caption) down */
-  padding-top: var(--masthead-h);
-  box-sizing: border-box; /* Include padding in height */
+  /* Push hero content (caption) down from the top */
+  padding-top: var(--masthead-h);
+  box-sizing: border-box; /* Include padding in height */
 }
 @media (min-width: 768px) {
-  .home-hero .page__hero--overlay { min-height: 520px; }
+  /* Taller on desktop */
+  .home-hero .page__hero--overlay { min-height: 75vh; }
 }
 
 /* ---------------------------
