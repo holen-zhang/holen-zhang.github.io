@@ -5,14 +5,12 @@
 @media (min-width: 768px)  { :root { --masthead-h: 76px; } }   /* tablets */
 @media (min-width: 1024px) { :root { --masthead-h: 92px; } }   /* desktops */
 
-/* Smooth scrolling between sections */
+/* Smooth scrolling + anchor offset */
 html { scroll-behavior: smooth; }
-
-/* Anchor jumps land below the fixed header */
 [id] { scroll-margin-top: calc(var(--masthead-h) + 8px ); }
 
 /* ---------------------------
-   1) Fixed masthead (transparent at top of home, solid elsewhere/when scrolled)
+   1) Fixed masthead
    --------------------------- */
 .masthead {
   position: fixed;
@@ -21,49 +19,65 @@ html { scroll-behavior: smooth; }
   transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out, backdrop-filter 0.2s ease-in-out;
 }
 
-/* Non-home pages: solid from the start */
-body:not(.is-home-hero) .masthead {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: saturate(180%) blur(8px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+/* Minimal Mistakes gives inner wrappers a background too—override both */
+.masthead .masthead__inner-wrap,
+.masthead .greedy-nav {
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
-/* Home (at top): transparent over hero */
+/* Non-home pages: solid header + push content down */
+body:not(.is-home-hero) .masthead {
+  background: rgba(28, 31, 36, 0.92); /* dark like your screenshot; change if you want */
+  backdrop-filter: saturate(180%) blur(8px);
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+body:not(.is-home-hero) .initial-content { padding-top: var(--masthead-h); }
+
+/* Home page (at top): transparent over hero, NO page padding */
 body.is-home-hero .masthead {
   background: transparent;
   backdrop-filter: none;
   box-shadow: none;
 }
+body.is-home-hero { padding-top: 0 !important; }
+body.is-home-hero .initial-content { padding-top: 0 !important; }
 
-/* Home (after scroll): becomes solid */
+/* Home page (after scroll): masthead turns solid */
 body.is-home-hero.is-scrolled .masthead {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(28, 31, 36, 0.92);
   backdrop-filter: saturate(180%) blur(8px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
 }
-
-/* Content padding rules:
-   - Non-home pages need a top pad so content doesn't hide under masthead
-   - Home page: no global top pad; hero sits at the very top under the transparent masthead */
-body:not(.is-home-hero) .initial-content { padding-top: var(--masthead-h); }
-body.is-home-hero .initial-content { padding-top: 0; }
 
 /* ---------------------------
    2) Hero (homepage)
    --------------------------- */
 
-/* Hide the big "Home" title on the hero */
+/* Hide "Home" text */
 .home-hero .page__title { display: none; }
 
-/* Hero should start at page top; give internal pad for caption so it clears the masthead */
+/* Make the hero a thinner banner like your example */
+.home-hero .page__hero,
 .home-hero .page__hero--overlay {
-  min-height: 70vh;                 /* taller hero */
-  margin-top: 0 !important;         /* no stray margins */
-  padding-top: var(--masthead-h);   /* push caption below masthead */
+  margin-top: 0 !important;       /* kill any stray top margin */
+}
+
+.home-hero .page__hero--overlay {
+  /* thinner banner; tweak these if you want even smaller/taller */
+  min-height: 36vh;
+  padding-top: var(--masthead-h);  /* push caption below the transparent masthead */
   box-sizing: border-box;
 }
-@media (min-width: 768px) {
-  .home-hero .page__hero--overlay { min-height: 75vh; }
+@media (min-width: 768px)  { .home-hero .page__hero--overlay { min-height: 40vh; } }
+@media (min-width: 1024px) { .home-hero .page__hero--overlay { min-height: 42vh; } }
+
+/* Optional: dim the caption background a touch for readability on bright images */
+.home-hero .page__hero-caption {
+  background: rgba(0,0,0,0.25);
+  border-radius: 6px;
+  padding: .35rem .6rem;
+  display: inline-block;
 }
 
 /* ---------------------------
@@ -74,32 +88,28 @@ body.is-home-hero .initial-content { padding-top: 0; }
   font-weight: 700;
   letter-spacing: 0.2px;
 }
-@media (min-width: 768px) {
-  .site-title { font-size: 2rem; }
-}
+@media (min-width: 768px) { .site-title { font-size: 2rem; } }
 
 /* ---------------------------
-   4) Author card (avatar, name, links)
+   4) Author card
    --------------------------- */
 .author__avatar img {
-  width: 140px;            /* try 160/180 if you want larger */
+  width: 140px;
   max-width: none;
-  border-radius: 0;        /* 0 = sharp rectangle */
+  border-radius: 0;
   filter: none !important;
   -webkit-filter: none !important;
   opacity: 1 !important;
 }
 .author__name { font-size: 1.2rem; }
-.author__avatar,
-.author__content,
-.author__urls.social-icons a { opacity: 1; }
+.author__avatar, .author__content, .author__urls.social-icons a { opacity: 1; }
 
 /* ---------------------------
-   5) Top nav active state (scrollspy)
+   5) Active link underline (scrollspy)
    --------------------------- */
 .masthead__menu-item a.is-active { border-bottom: 2px solid currentColor; }
 
 /* ---------------------------
-   6) Minor spacing guardrails
+   6) Guardrails
    --------------------------- */
 .page__content > *:first-child { margin-top: 0; }
