@@ -39,7 +39,7 @@ body.home-hero .masthead {
   backdrop-filter: none;
   box-shadow: none; */
   background: rgba(255,255,255,.08);
-  backdrop-filter: saturate(180%) blur(8px);
+  backdrop-filter: saturate(180%) blur(4px);
   box-shadow:none;
 }
 body.home-hero .initial-content { padding-top: 0 !important; }
