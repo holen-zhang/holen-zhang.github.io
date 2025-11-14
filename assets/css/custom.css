@@ -17,29 +17,11 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-/* * Push content down.
- * We use the 'body' class (set in index.md) to decide what to do.
- */
-
-/* 1. On NORMAL pages, push the *entire container* down.
- * This rule applies when the body *does not* have .home-hero
- */
-body:not(.home-hero) .initial-content {
-  padding-top: var(--masthead-h);
-}
-
-/* 2. On the HERO page, push the *main content* down (fixes overlap)
- * but leave the container padding at 0 (fixes gap)
- */
-body.home-hero .initial-content #main {
-  padding-top: var(--masthead-h);
-}
+html { scroll-behavior: smooth; }
+body { padding-top: var(--masthead-h); }
 
 /* Anchor jumps land below the fixed header */
 [id] { scroll-margin-top: calc(var(--masthead-h) + 8px ); }
-
-/* Smooth scrolling between sections */
-html { scroll-behavior: smooth; }
 
 /* ---------------------------
    2) Hero (homepage)
@@ -104,3 +86,8 @@ html { scroll-behavior: smooth; }
    --------------------------- */
 /* Prevent stray top margin from reintroducing gaps at the top of pages */
 .page__content > *:first-child { margin-top: 0; }
+
+/* Ensure page headers never collide with the fixed masthead */
+.page__hero, .page__title, .page__meta {
+  scroll-margin-top: calc(var(--masthead-h) + 8px);
+}
