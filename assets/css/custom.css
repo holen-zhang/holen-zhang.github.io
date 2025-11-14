@@ -27,3 +27,45 @@
   text-decoration: none;
   font-weight: 500;            
 }
+
+/* FORCE the avatar to full color/opacity (beat theme + hover rules) */
+.page__sidebar .author__avatar img,
+.author__avatar img {
+  -webkit-filter: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* Make sidebar text and links “highlighted” by default */
+.page__sidebar,
+.page__sidebar .author__content,
+.page__sidebar .author__bio,
+.page__sidebar .author__urls-wrapper {
+  color: #222 !important;             /* darker base text */
+}
+
+/* Links + icons: bright color and full opacity */
+.page__sidebar .author__urls li,
+.page__sidebar .author__urls li a,
+.page__sidebar .author__urls li a i,
+.page__sidebar .author__urls li a span {
+  color: #2a7ae2 !important;          /* pick your accent */
+  opacity: 1 !important;
+  text-decoration: none !important;
+}
+
+/* Keep the same look on hover/focus (no dim/underline changes) */
+.page__sidebar .author__urls li a:hover,
+.page__sidebar .author__urls li a:focus {
+  color: #2a7ae2 !important;
+  opacity: 1 !important;
+  text-decoration: none !important;
+}
+
+/* Ensure FA icons inherit the link color (some skins override this) */
+.page__sidebar .author__urls .fab,
+.page__sidebar .author__urls .fas,
+.page__sidebar .author__urls .ai {
+  color: inherit !important;
+  opacity: 1 !important;
+}
