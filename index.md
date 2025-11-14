@@ -10,7 +10,7 @@ header:
   caption: "Mont Tremblant National Park, Quebec"
 ---
 
-## About Me {#home}
+## About Me
 
 I am a PhD candidate in Software Engineering at the [University of Waterloo](https://uwaterloo.ca/). Advised by Professor [Weiyi Shang](https://ece.uwaterloo.ca/~wshang/), my research interests include Software Testing, GUI Testing, Software Logging, and Software Performance.
 
