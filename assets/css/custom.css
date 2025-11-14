@@ -21,7 +21,7 @@
 .initial-content { padding-top: var(--masthead-h); }
 
 /* Anchor jumps land below the fixed header */
-[id] { scroll-margin-top: calc(var(--masthead-h)); }
+[id] { scroll-margin-top: calc(var(--masthead-h) + 8px ); }
 
 /* Smooth scrolling between sections */
 html { scroll-behavior: smooth; }
