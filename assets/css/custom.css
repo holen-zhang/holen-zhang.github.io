@@ -35,12 +35,12 @@ body:not(.home-hero) .initial-content { padding-top: var(--masthead-h); }
 
 /* HOME page at top: transparent header, no page padding */
 body.home-hero .masthead {
-  /* background: transparent;
+  background: transparent;
   backdrop-filter: none;
-  box-shadow: none; */
-  background: rgba(255,255,255,.08);
+  box-shadow: none;
+  /* background: rgba(255,255,255,.08);
   backdrop-filter: saturate(180%) blur(4px);
-  box-shadow:none;
+  box-shadow:none; */
 }
 body.home-hero .initial-content { padding-top: 0 !important; }
 
