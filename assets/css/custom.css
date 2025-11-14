@@ -1,66 +1,90 @@
-/* 1) Hide the big "Home" text on the hero (only on the homepage) */
+/* ---------------------------
+   0) Global variables (header height per breakpoint)
+   --------------------------- */
+:root { --masthead-h: 64px; }                         /* phones */
+@media (min-width: 768px)  { :root { --masthead-h: 76px; } }   /* tablets */
+@media (min-width: 1024px) { :root { --masthead-h: 92px; } }   /* desktops */
+
+/* ---------------------------
+   1) Fixed masthead (always visible)
+   --------------------------- */
+.masthead {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;                         /* above hero/content */
+  background: rgba(255, 255, 255, 0.92); /* keep text readable */
+  backdrop-filter: saturate(180%) blur(8px); /* optional glass effect */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Push the entire page content down exactly once (prevents overlap) */
+.initial-content { padding-top: var(--masthead-h); }
+
+/* Anchor jumps land below the fixed header */
+[id] { scroll-margin-top: calc(var(--masthead-h) + 8px); }
+
+/* Smooth scrolling between sections */
+html { scroll-behavior: smooth; }
+
+/* ---------------------------
+   2) Hero (homepage)
+   --------------------------- */
+
+/* Hide the big "Home" title on the hero */
 .home-hero .page__title { display: none; }
 
-/* 2) Make the hero taller */
+/* Taller hero */
 .home-hero .page__hero--overlay {
-  min-height: 420px;                /* tweak to taste (e.g., 480px) */
+  min-height: 420px;
+  /* Do NOT add top margin here; the page is already offset by .initial-content */
+  margin-top: 0;
 }
 @media (min-width: 768px) {
   .home-hero .page__hero--overlay { min-height: 520px; }
 }
 
-/* Bigger site title in the masthead */
+/* ---------------------------
+   3) Masthead typography (site title)
+   --------------------------- */
 .site-title {
-  font-size: 1.6rem;        /* tweak to taste */
+  font-size: 1.6rem;  /* tweak to taste */
   font-weight: 700;
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
 }
 @media (min-width: 768px) {
   .site-title { font-size: 2rem; }
 }
 
-
-/* 3) Bigger, rectangular profile photo */
+/* ---------------------------
+   4) Author card (avatar, name, links)
+   --------------------------- */
 .author__avatar img {
-  width: 140px;                     /* increase size; try 160px/180px if you like */
+  width: 140px;        /* try 160/180 if you want larger */
   max-width: none;
-  border-radius: 0;                 /* 0 = sharp rectangle; use 8px for rounded corners */
+  border-radius: 0;    /* 0 = sharp rectangle; e.g., 8px for subtle rounding */
+  filter: none !important;    /* ensure not greyscaled by theme */
+  -webkit-filter: none !important;
+  opacity: 1 !important;      /* ensure not dimmed by theme */
 }
 
 .author__name { font-size: 1.2rem; }
 
-.author__avatar, .author__content,
+/* Unmute author block + social icons */
+.author__avatar,
+.author__content,
 .author__urls.social-icons a {
   opacity: 1;
 }
 
-
-:root { --masthead-h: 64px; }          /* phones */
-@media (min-width: 768px) { :root { --masthead-h: 72px; } }  /* tablets/desktop */
-
-/* Keep the top nav visible while scrolling */
-.masthead {
-  position: fixed;         
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;            /* above hero image/content */
-  background: rgba(255,255,255,.92);  /* solid/opaque so text stays readable */
-  backdrop-filter: saturate(180%) blur(8px);  /* optional glassy feel */
-  box-shadow: 0 2px 8px rgba(0,0,0,.06);      /* subtle separation */
-}
-
-.initial-content { padding-top: 0; }
-.home-hero .page__hero--overlay { margin-top: var(--masthead-h); }
-
-/* .site-content { padding-top: 80px; } */
-
-/* Smooth scroll between sections */
-html { scroll-behavior: smooth; }
-
-[id] { scroll-margin-top: calc(var(--masthead-h) + 8px); }
-
-/* Optional: a visible "active" state for the top links */
+/* ---------------------------
+   5) Top nav active state (when scrollspy marks a link)
+   --------------------------- */
 .masthead__menu-item a.is-active {
   border-bottom: 2px solid currentColor;
 }
+
+/* ---------------------------
+   6) Minor spacing guardrails
+   --------------------------- */
+/* Prevent stray top margin from reintroducing gaps at the top of pages */
+.page__content > *:first-child { margin-top: 0; }
