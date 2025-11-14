@@ -51,7 +51,7 @@
 }
 
 .initial-content { padding-top: var(--masthead-h); }
-.home-hero .page__hero--overlay { margin-top: var(--masthead-h); }
+.home-hero .page__hero--overlay { margin-top: 0; }
 
 /* .site-content { padding-top: 80px; } */
 
