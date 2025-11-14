@@ -3,7 +3,7 @@ layout: single
 title: "Home"
 seo_title: "Haonan Zhang’s web home"
 author_profile: true
-classes: [wide, home-hero]
+classes: [wide, home-hero, initial-content]
 header:
   overlay_image: /assets/images/hero.jpeg
   overlay_filter: 0
