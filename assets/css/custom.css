@@ -87,3 +87,26 @@ body.home-hero.is-scrolled .masthead {
 
 .masthead__menu-item a.is-active { border-bottom: 2px solid currentColor; }
 .page__content > *:first-child { margin-top: 0; }
+
+
+/* Remove all masthead hairlines/shadows (MM adds a 1px rule by default) */
+.masthead,
+.masthead::before,
+.masthead::after,
+.masthead .masthead__inner-wrap,
+.masthead .greedy-nav,
+.masthead .greedy-nav::before,
+.masthead .greedy-nav::after {
+  border: 0 !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  background-image: none !important; /* just in case a gradient is injected */
+}
+
+/* Some builds add a border on the inner menu list too */
+.masthead .visible-links,
+.masthead .hidden-links {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
