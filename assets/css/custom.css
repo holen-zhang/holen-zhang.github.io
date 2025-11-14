@@ -34,6 +34,10 @@
   opacity: 1;
 }
 
+
+:root { --masthead-h: 64px; }          /* phones */
+@media (min-width: 768px) { :root { --masthead-h: 72px; } }  /* tablets/desktop */
+
 /* Keep the top nav visible while scrolling */
 .masthead {
   position: fixed;         
@@ -43,16 +47,18 @@
   z-index: 1000;            /* above hero image/content */
   background: rgba(255,255,255,.92);  /* solid/opaque so text stays readable */
   backdrop-filter: saturate(180%) blur(8px);  /* optional glassy feel */
-  /* box-shadow: 0 2px 8px rgba(0,0,0,.06);      /* subtle separation */ */
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);      /* subtle separation */
 }
 
-.site-content { padding-top: 80px; }
+.initial-content { padding-top: var(--masthead-h); }
+.home-hero .page__hero--overlay { margin-top: var(--masthead-h); }
+
+/* .site-content { padding-top: 80px; } */
 
 /* Smooth scroll between sections */
 html { scroll-behavior: smooth; }
 
-/* When jumping to an anchor, keep it visible under the fixed masthead */
-[id] { scroll-margin-top: 80px; }   /* adjust if your header height differs */
+[id] { scroll-margin-top: calc(var(--masthead-h) + 8px); }
 
 /* Optional: a visible "active" state for the top links */
 .masthead__menu-item a.is-active {
