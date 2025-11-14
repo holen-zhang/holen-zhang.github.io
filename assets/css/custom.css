@@ -1,129 +1,105 @@
 /* ---------------------------
-   0) Global variables (header height per breakpoint)
-   --------------------------- */
-:root { --masthead-h: 64px; }                         /* phones */
-@media (min-width: 768px)  { :root { --masthead-h: 76px; } }   /* tablets */
-@media (min-width: 1024px) { :root { --masthead-h: 92px; } }   /* desktops */
-
-/* ---------------------------
-   1) Fixed masthead (transparent-to-solid)
-   --------------------------- */
-
-/* Base styles for all pages */
-.masthead {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1000;
-  /* Add a smooth transition for when we scroll */
-  transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
-
-/* 1. STYLES FOR NON-HOME PAGES:
-   Masthead is solid white */
-body:not(.home-hero) .masthead {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: saturate(180%) blur(8px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-}
-
-/* 2. STYLES FOR HOME PAGE (at top):
-   Masthead is transparent */
-body.home-hero .masthead {
-  background: transparent;
-  backdrop-filter: none;
-  box-shadow: none;
-}
-
-/* 3. STYLES FOR HOME PAGE (scrolled):
-   Masthead becomes solid white */
-body.home-hero .masthead.is-scrolled {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: saturate(180%) blur(8px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-}
-
-/* 4. CONTENT PADDING (FIXES GAP/OVERLAP): */
-
-/* On non-hero pages, push all content down */
-body:not(.home-hero) .initial-content {
-  padding-top: var(--masthead-h);
-}
-
-/* On the home page, REMOVE the top padding to kill the "gap" */
-body.home-hero .initial-content {
-  padding-top: 0;
-}
-
-/* Anchor jumps land below the fixed header */
-[id] { scroll-margin-top: calc(var(--masthead-h) + 8px ); }
+   0) Global variables (header height per breakpoint)
+   --------------------------- */
+:root { --masthead-h: 64px; }                 /* phones */
+@media (min-width: 768px)  { :root { --masthead-h: 76px; } }   /* tablets */
+@media (min-width: 1024px) { :root { --masthead-h: 92px; } }   /* desktops */
 
 /* Smooth scrolling between sections */
 html { scroll-behavior: smooth; }
 
+/* Anchor jumps land below the fixed header */
+[id] { scroll-margin-top: calc(var(--masthead-h) + 8px ); }
+
 /* ---------------------------
-   2) Hero (homepage)
-   --------------------------- */
+   1) Fixed masthead (transparent at top of home, solid elsewhere/when scrolled)
+   --------------------------- */
+.masthead {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out, backdrop-filter 0.2s ease-in-out;
+}
+
+/* Non-home pages: solid from the start */
+body:not(.is-home-hero) .masthead {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Home (at top): transparent over hero */
+body.is-home-hero .masthead {
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+/* Home (after scroll): becomes solid */
+body.is-home-hero.is-scrolled .masthead {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Content padding rules:
+   - Non-home pages need a top pad so content doesn't hide under masthead
+   - Home page: no global top pad; hero sits at the very top under the transparent masthead */
+body:not(.is-home-hero) .initial-content { padding-top: var(--masthead-h); }
+body.is-home-hero .initial-content { padding-top: 0; }
+
+/* ---------------------------
+   2) Hero (homepage)
+   --------------------------- */
 
 /* Hide the big "Home" title on the hero */
 .home-hero .page__title { display: none; }
 
-/* Taller hero */
+/* Hero should start at page top; give internal pad for caption so it clears the masthead */
 .home-hero .page__hero--overlay {
-  /* Make hero taller (e.g., 70% of viewport height) */
-  min-height: 70vh;
-  /* Remove any default margin */
-  margin-top: 0 !important;
-  /* Push hero content (caption) down from the top */
-  padding-top: var(--masthead-h);
-  box-sizing: border-box; /* Include padding in height */
+  min-height: 70vh;                 /* taller hero */
+  margin-top: 0 !important;         /* no stray margins */
+  padding-top: var(--masthead-h);   /* push caption below masthead */
+  box-sizing: border-box;
 }
 @media (min-width: 768px) {
-  /* Taller on desktop */
-  .home-hero .page__hero--overlay { min-height: 75vh; }
+  .home-hero .page__hero--overlay { min-height: 75vh; }
 }
 
 /* ---------------------------
-   3) Masthead typography (site title)
-   --------------------------- */
+   3) Masthead typography (site title)
+   --------------------------- */
 .site-title {
-  font-size: 1.6rem;  /* tweak to taste */
-  font-weight: 700;
-  letter-spacing: 0.2px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
 }
 @media (min-width: 768px) {
-  .site-title { font-size: 2rem; }
+  .site-title { font-size: 2rem; }
 }
 
 /* ---------------------------
-   4) Author card (avatar, name, links)
-   --------------------------- */
+   4) Author card (avatar, name, links)
+   --------------------------- */
 .author__avatar img {
-  width: 140px;        /* try 160/180 if you want larger */
-  max-width: none;
-  border-radius: 0;    /* 0 = sharp rectangle; e.g., 8px for subtle rounding */
-  filter: none !important;    /* ensure not greyscaled by theme */
-  -webkit-filter: none !important;
-  opacity: 1 !important;      /* ensure not dimmed by theme */
+  width: 140px;            /* try 160/180 if you want larger */
+  max-width: none;
+  border-radius: 0;        /* 0 = sharp rectangle */
+  filter: none !important;
+  -webkit-filter: none !important;
+  opacity: 1 !important;
 }
-
 .author__name { font-size: 1.2rem; }
-
-/* Unmute author block + social icons */
 .author__avatar,
 .author__content,
-.author__urls.social-icons a {
-  opacity: 1;
-}
+.author__urls.social-icons a { opacity: 1; }
 
 /* ---------------------------
-   5) Top nav active state (when scrollspy marks a link)
-   --------------------------- */
-.masthead__menu-item a.is-active {
-  border-bottom: 2px solid currentColor;
-}
+   5) Top nav active state (scrollspy)
+   --------------------------- */
+.masthead__menu-item a.is-active { border-bottom: 2px solid currentColor; }
 
 /* ---------------------------
-   6) Minor spacing guardrails
-   --------------------------- */
-/* Prevent stray top margin from reintroducing gaps at the top of pages */
+   6) Minor spacing guardrails
+   --------------------------- */
 .page__content > *:first-child { margin-top: 0; }
