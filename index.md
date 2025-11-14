@@ -8,9 +8,6 @@ header:
   overlay_image: /assets/images/hero.jpeg
   overlay_filter: 0
   caption: "Mont-Tremblant"
-footer_scripts:
-  - /assets/js/scrollspy.js
-  - /assets/js/header-scroll.js
 ---
 
 ## About Me {#home}
