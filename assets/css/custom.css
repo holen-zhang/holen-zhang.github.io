@@ -1,115 +1,89 @@
 /* ---------------------------
-   0) Global variables (header height per breakpoint)
+   0) Header height per breakpoint
    --------------------------- */
-:root { --masthead-h: 64px; }                 /* phones */
-@media (min-width: 768px)  { :root { --masthead-h: 76px; } }   /* tablets */
-@media (min-width: 1024px) { :root { --masthead-h: 92px; } }   /* desktops */
+:root { --masthead-h: 64px; }
+@media (min-width: 768px)  { :root { --masthead-h: 76px; } }
+@media (min-width: 1024px) { :root { --masthead-h: 92px; } }
 
-/* Smooth scrolling + anchor offset */
 html { scroll-behavior: smooth; }
-[id] { scroll-margin-top: calc(var(--masthead-h) + 8px ); }
+[id] { scroll-margin-top: calc(var(--masthead-h) + 8px); }
 
 /* ---------------------------
-   1) Fixed masthead
+   1) Fixed masthead (transparent over hero)
    --------------------------- */
 .masthead {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out, backdrop-filter 0.2s ease-in-out;
+  transition: background .2s ease, box-shadow .2s ease, backdrop-filter .2s ease;
 }
 
-/* Minimal Mistakes gives inner wrappers a background too—override both */
+/* MM adds backgrounds on inner wrappers — nuke them by default */
 .masthead .masthead__inner-wrap,
 .masthead .greedy-nav {
   background: transparent !important;
   box-shadow: none !important;
 }
 
-/* Non-home pages: solid header + push content down */
-body:not(.is-home-hero) .masthead {
-  background: rgba(28, 31, 36, 0.92); /* dark like your screenshot; change if you want */
+/* NON-HOME pages: solid header + content padding */
+body:not(.home-hero) .masthead {
+  background: rgba(255,255,255,0.92);
   backdrop-filter: saturate(180%) blur(8px);
-  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
 }
-body:not(.is-home-hero) .initial-content { padding-top: var(--masthead-h); }
+body:not(.home-hero) .initial-content { padding-top: var(--masthead-h); }
 
-/* Home page (at top): transparent over hero, NO page padding */
-body.is-home-hero .masthead {
+/* HOME page at top: transparent header, no page padding */
+body.home-hero .masthead {
   background: transparent;
   backdrop-filter: none;
   box-shadow: none;
 }
-body.is-home-hero { padding-top: 0 !important; }
-body.is-home-hero .initial-content { padding-top: 0 !important; }
+body.home-hero .initial-content { padding-top: 0 !important; }
 
-/* Home page (after scroll): masthead turns solid */
-body.is-home-hero.is-scrolled .masthead {
-  background: rgba(28, 31, 36, 0.92);
+/* HOME page when scrolled: turn header solid */
+body.home-hero.is-scrolled .masthead {
+  background: rgba(255,255,255,0.92);
   backdrop-filter: saturate(180%) blur(8px);
-  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
 }
 
 /* ---------------------------
-   2) Hero (homepage)
+   2) Hero (thinner banner)
    --------------------------- */
-
-/* Hide "Home" text */
 .home-hero .page__title { display: none; }
 
-/* Make the hero a thinner banner like your example */
 .home-hero .page__hero,
 .home-hero .page__hero--overlay {
-  margin-top: 0 !important;       /* kill any stray top margin */
+  margin-top: 0 !important;
 }
 
 .home-hero .page__hero--overlay {
-  /* thinner banner; tweak these if you want even smaller/taller */
-  min-height: 36vh;
-  padding-top: var(--masthead-h);  /* push caption below the transparent masthead */
+  /* thinner banner like your example */
+  min-height: 34vh;              /* tweak: 28–40vh */
+  padding-top: var(--masthead-h);/* push caption below header */
   box-sizing: border-box;
 }
-@media (min-width: 768px)  { .home-hero .page__hero--overlay { min-height: 40vh; } }
-@media (min-width: 1024px) { .home-hero .page__hero--overlay { min-height: 42vh; } }
+@media (min-width: 768px)  { .home-hero .page__hero--overlay { min-height: 38vh; } }
+@media (min-width: 1024px) { .home-hero .page__hero--overlay { min-height: 40vh; } }
 
-/* Optional: dim the caption background a touch for readability on bright images */
+/* Optional caption readability */
 .home-hero .page__hero-caption {
-  background: rgba(0,0,0,0.25);
+  background: rgba(0,0,0,0.22);
   border-radius: 6px;
   padding: .35rem .6rem;
   display: inline-block;
 }
 
 /* ---------------------------
-   3) Masthead typography (site title)
+   3) Masthead typography, author card, etc.
    --------------------------- */
-.site-title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-}
+.site-title { font-size: 1.6rem; font-weight: 700; letter-spacing: .2px; }
 @media (min-width: 768px) { .site-title { font-size: 2rem; } }
 
-/* ---------------------------
-   4) Author card
-   --------------------------- */
-.author__avatar img {
-  width: 140px;
-  max-width: none;
-  border-radius: 0;
-  filter: none !important;
-  -webkit-filter: none !important;
-  opacity: 1 !important;
-}
+.author__avatar img { width: 140px; max-width: none; border-radius: 0; filter: none !important; -webkit-filter: none !important; opacity: 1 !important; }
 .author__name { font-size: 1.2rem; }
 .author__avatar, .author__content, .author__urls.social-icons a { opacity: 1; }
 
-/* ---------------------------
-   5) Active link underline (scrollspy)
-   --------------------------- */
 .masthead__menu-item a.is-active { border-bottom: 2px solid currentColor; }
-
-/* ---------------------------
-   6) Guardrails
-   --------------------------- */
 .page__content > *:first-child { margin-top: 0; }
