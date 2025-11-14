@@ -1,17 +1,9 @@
-# main:
-#   - title: "Home"
-#     url: /
-#   - title: "Publications"
-#     url: /publications/
-#   - title: "Service"
-#     url: /service/
-#   - title: "Awards"
-#     url: /awards/
-
 main:
   - title: "Publications"
     url: "/#publications"
   - title: "Service"
     url: "/#service"
+  - title: "Teaching"
+    url: "#teaching"
   - title: "Awards"
     url: "/#awards"
