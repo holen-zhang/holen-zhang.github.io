@@ -3,7 +3,7 @@ layout: single
 title: "Home"
 seo_title: "Haonan Zhang’s web home"
 author_profile: true
-classes: [wide, home-hero, initial-content]
+classes: [wide, home-hero]
 header:
   overlay_image: /assets/images/hero.jpeg
   overlay_filter: 0
@@ -12,9 +12,7 @@ footer_scripts:
   - /assets/js/scrollspy.js
 ---
 
-<div id="home"></div>
-
-## About Me
+## About Me {#home}
 
 I am a PhD candidate in Software Engineering at the [University of Waterloo](https://uwaterloo.ca/). Advised by Professor [Weiyi Shang](https://ece.uwaterloo.ca/~wshang/), my research interests include Software Testing, GUI Testing, Software Logging, and Software Performance.
 
