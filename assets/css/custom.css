@@ -1,71 +1,98 @@
-/* 1) Hide the big "Home" text on the hero (only on the homepage) */
+/* ===========================
+   Home hero tweaks
+   =========================== */
+
+/* 1) Hide the big "Home" title on the hero (homepage only) */
 .home-hero .page__title { display: none; }
 
-/* 2) Make the hero taller */
-.home-hero .page__hero--overlay {
-  min-height: 420px;                /* tweak to taste (e.g., 480px) */
-}
+/* 2) Make the hero banner taller */
+.home-hero .page__hero--overlay { min-height: 420px; }
 @media (min-width: 768px) {
   .home-hero .page__hero--overlay { min-height: 520px; }
 }
 
-/* 3) Bigger, rectangular profile photo */
-.author__avatar img {
-  width: 140px;                     /* increase size; try 160px/180px if you like */
-  max-width: none;
-  border-radius: 0;                 /* 0 = sharp rectangle; use 8px for rounded corners */
-  filter: none !important;
-  opacity: 1 !important;
-}
 
-.author__name { font-size: 1.2rem; }
+/* ===========================
+   Author card (avatar, text, links)
+   =========================== */
 
-.page__sidebar .author__urls li a,
-.page__sidebar .author__urls li a i {
-  color: #2a7ae2 !important;   
-  opacity: 1 !important;
-  text-decoration: none;
-  font-weight: 500;            
-}
-
-/* FORCE the avatar to full color/opacity (beat theme + hover rules) */
+/* 3) Bigger, rectangular profile photo (ensure full color/opacity) */
 .page__sidebar .author__avatar img,
+.sidebar .author__avatar img,
 .author__avatar img {
+  width: 140px;              /* try 160px/180px if you want larger */
+  max-width: none;
+  border-radius: 0;          /* 0 = sharp rectangle; use 8px for slight rounding */
   -webkit-filter: none !important;
   filter: none !important;
   opacity: 1 !important;
 }
 
-/* Make sidebar text and links “highlighted” by default */
+/* Author name size */
+.author__name { font-size: 1.2rem; }
+
+/* Darken base text in the sidebar (bio, small labels, etc.) */
 .page__sidebar,
 .page__sidebar .author__content,
 .page__sidebar .author__bio,
-.page__sidebar .author__urls-wrapper {
-  color: #222 !important;             /* darker base text */
+.page__sidebar .author__urls-wrapper,
+.sidebar,
+.sidebar .author__content,
+.sidebar .author__bio,
+.sidebar .author__urls-wrapper {
+  color: #222 !important;
 }
 
-/* Links + icons: bright color and full opacity */
+/* Links + icons: bright by default (no dimming) */
 .page__sidebar .author__urls li,
 .page__sidebar .author__urls li a,
 .page__sidebar .author__urls li a i,
-.page__sidebar .author__urls li a span {
-  color: #2a7ae2 !important;          /* pick your accent */
+.page__sidebar .author__urls li a span,
+.sidebar .author__urls li,
+.sidebar .author__urls li a,
+.sidebar .author__urls li a i,
+.sidebar .author__urls li a span {
+  color: #2a7ae2 !important;     /* set your accent color here */
   opacity: 1 !important;
   text-decoration: none !important;
+  font-weight: 500;
 }
 
-/* Keep the same look on hover/focus (no dim/underline changes) */
+/* Keep the same look on hover/focus (no re-dimming/underline) */
 .page__sidebar .author__urls li a:hover,
-.page__sidebar .author__urls li a:focus {
+.page__sidebar .author__urls li a:focus,
+.sidebar .author__urls li a:hover,
+.sidebar .author__urls li a:focus {
   color: #2a7ae2 !important;
   opacity: 1 !important;
   text-decoration: none !important;
 }
 
-/* Ensure FA icons inherit the link color (some skins override this) */
+/* Location line (map-pin icon + locality text) */
+.page__sidebar .author__urls li[itemprop="homeLocation"] i,
+.page__sidebar .author__urls li[itemprop="homeLocation"] span,
+.sidebar .author__urls li[itemprop="homeLocation"] i,
+.sidebar .author__urls li[itemprop="homeLocation"] span {
+  color: #222 !important;
+  opacity: 1 !important;
+}
+
+/* Ensure FA/Academicons inherit link color if you add them */
 .page__sidebar .author__urls .fab,
 .page__sidebar .author__urls .fas,
-.page__sidebar .author__urls .ai {
+.page__sidebar .author__urls .ai,
+.sidebar .author__urls .fab,
+.sidebar .author__urls .fas,
+.sidebar .author__urls .ai {
   color: inherit !important;
+  opacity: 1 !important;
+}
+
+/* Optional: make the "Follow" button match the accent and not look muted */
+.sidebar .btn.btn--inverse,
+.page__sidebar .btn.btn--inverse {
+  background: #2a7ae2 !important;
+  color: #fff !important;
+  border: none !important;
   opacity: 1 !important;
 }
