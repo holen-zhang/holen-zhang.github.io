@@ -38,8 +38,8 @@ body.home-hero .masthead {
   /* background: transparent;
   backdrop-filter: none;
   box-shadow: none; */
-  background: rgba(255,255,255,.35);
-  backdrop-filter: saturate(180%) blur(6px);
+  background: rgba(255,255,255,.18);
+  backdrop-filter: saturate(180%) blur(8px);
   box-shadow:none;
 }
 body.home-hero .initial-content { padding-top: 0 !important; }
