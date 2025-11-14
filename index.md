@@ -18,11 +18,10 @@ In addition to my research, I am a research intern at [ERA Environmental Softwar
 
 
 ## Publications {#publications}
-### 2025
-- **Paper Title**. *Venue*, 2025. [PDF](#) · [Code](#)
 
-### 2024
-- **Paper Title**. *Venue*, 2024. [PDF](#)
+**Haonan Zhang**, Kundi Yao, Zishuo Ding, Lizhi Liao, and Weiyi Shang. "Who's to Blame? Rethinking the Brittleness of Automated Web GUI Testing from a Pragmatic Perspective." The 40th IEEE/ACM International Conference on Automated Software Engineering (ASE 2025). Accepted. 
+An Chen, Kundi Yao, **Haonan Zhang**, Yiming Tang, and Weiyi Shang. An Empirical Study of Logging Practice in CUDA-based Deep Learning Systems. The 25th IEEE International Conference on Software Quality, Reliability, and Security (QRS 2025). [LINK](https://ieeexplore.ieee.org/document/11173505)
+Hanying Shao, Zishuo Ding, Kundi Yao, **Haonan Zhang**, and Weiyi Shang. Improving QA System Testing Efficiency Through White-Box Test Prioritization. The 25th IEEE International Conference on Software Quality, Reliability, and Security (QRS 2025). [LINK](https://ieeexplore.ieee.org/document/11173507)
 
 
 ## Service {#service}
