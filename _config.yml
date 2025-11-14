@@ -24,7 +24,7 @@ paginate_path: "/page:num/"
 author:
   name: Haonan Zhang
   avatar: "/assets/images/profile.jpeg"
-  bio: "PhD student • Software Engineering"
+  bio: "PhD candidate • Software Engineering"
   location: "Canada"
   links:
     - label: "GitHub"
