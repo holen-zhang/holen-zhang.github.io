@@ -10,6 +10,7 @@ header:
   caption: "Mont-Tremblant"
 footer_scripts:
   - /assets/js/scrollspy.js
+  - /assets/js/header-scroll.js
 ---
 
 ## About Me {#home}
