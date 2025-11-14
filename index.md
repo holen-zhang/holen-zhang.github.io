@@ -36,14 +36,16 @@ Julian Harty[^equal], **Haonan Zhang**[^equal], Lili Wei, Luca Pascarella, Maur√
 [^equal]: Contributed equally to the work.
 
 
-## Academic Service {#service}
+## Service {#service}
 ### Program Committee
 - [ISSRE 2025 (Artifact Evaluation Track)](https://issre.github.io/2025/committee_artifact-evaluation-PC.html).
 ### Journal Reviewer
 - TOSEM
+### Student Volunteer
+- ICSE 2025
 
 
-## Teaching
+## Teaching {#teaching}
 ### Teaching assistant at the University of Waterloo
 - SE 464: Software Architecture and Design (Fall 2024)
 - SE 465: Software Testing and Quality Assurance (Winter 2024)
