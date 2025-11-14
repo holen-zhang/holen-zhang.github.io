@@ -36,8 +36,9 @@ html { scroll-behavior: smooth; }
 /* Taller hero */
 .home-hero .page__hero--overlay {
   min-height: 420px;
-  /* Add padding to push hero *content* (caption) below the fixed header */
-  padding-top: var(--masthead-h);
+  /* We are using .initial-content, so we MUST kill any default
+     top margin to prevent a "double gap" */
+  margin-top: 0 !important;
 }
 @media (min-width: 768px) {
   .home-hero .page__hero--overlay { min-height: 520px; }
