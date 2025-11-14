@@ -7,7 +7,7 @@ classes: [wide, home-hero, initial-content]
 header:
   overlay_image: /assets/images/hero.jpeg
   overlay_filter: 0
-  caption: "Mont-Tremblant"
+  caption: "Mont Tremblant National Park, Quebec"
 ---
 
 ## About Me {#home}
