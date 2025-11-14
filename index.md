@@ -25,6 +25,14 @@ An Chen, Kundi Yao, **Haonan Zhang**, Yiming Tang, and Weiyi Shang. An Empirical
 
 Hanying Shao, Zishuo Ding, Kundi Yao, **Haonan Zhang**, and Weiyi Shang. Improving QA System Testing Efficiency Through White-Box Test Prioritization. The 25th IEEE International Conference on Software Quality, Reliability, and Security (QRS 2025). [LINK](https://ieeexplore.ieee.org/document/11173507)
 
+**Haonan Zhang**. On the Brittleness of Legacy Web UI Testing: A Pragmatic Perspective. The 34th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA 2025), ISSTA Companion. [LINK](https://dl.acm.org/doi/abs/10.1145/3713081.3731742)
+
+**Haonan Zhang**, Lizhi Liao, Zishuo Ding, Weiyi Shang, Nidhi Narula, Catalin Sporea, Andrei Toma, and Sarah Sajedi. Towards a Robust Waiting Strategy for Web GUI Testing for an Industrial Software System. The 39th IEEE/ACM International Conference on Automated Software Engineering (ASE 2024), Industry track. [LINK](https://dl.acm.org/doi/abs/10.1145/3691620.3695269)
+
+**Haonan Zhang**, Yiming Tang, Maxime Lamothe, Heng Li, and Weiyi Shang. Studying Logging Practice in Test Code. Empirical Software Engineering (EMSE 2022). [LINK](https://link.springer.com/article/10.1007/s10664-022-10139-0)
+
+Julian Harty, Haonan Zhang, Lili Wei, Luca Pascarella, Maurício Aniche, and Weiyi Shang. Logging Practices with Mobile Analytics: An Empirical Study on Firebase. The 8th IEEE/ACM International Conference on Mobile Software Engineering and Systems (MOBILESoft 2021). [LINK](https://ieeexplore.ieee.org/abstract/document/9460930)
+
 
 ## Service {#service}
 - Program Committee: ASE 2025, ICSE 2024 (AE), …
