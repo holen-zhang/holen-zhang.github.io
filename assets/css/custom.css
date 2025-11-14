@@ -50,8 +50,8 @@
   box-shadow: 0 2px 8px rgba(0,0,0,.06);      /* subtle separation */
 }
 
-.initial-content { padding-top: var(--masthead-h); }
-.home-hero .page__hero--overlay { margin-top: 0; }
+.initial-content { padding-top: 0; }
+.home-hero .page__hero--overlay { margin-top: var(--masthead-h); }
 
 /* .site-content { padding-top: 80px; } */
 
