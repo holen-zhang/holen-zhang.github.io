@@ -42,7 +42,7 @@ Julian Harty[^equal], **Haonan Zhang**[^equal], Lili Wei, Luca Pascarella, Maur√
 - [ISSRE 2025 (Artifact Evaluation Track)](https://issre.github.io/2025/committee_artifact-evaluation-PC.html)
 
 ### Journal Reviewer
-- TOSEM
+- TOSEM, IST
 
 ### Student Volunteer
 - ICSE 2025
