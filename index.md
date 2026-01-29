@@ -51,6 +51,7 @@ Julian Harty[^equal], **Haonan Zhang**[^equal], Lili Wei, Luca Pascarella, Maur√
 ## Teaching {#teaching}
 
 ### Teaching assistant at the University of Waterloo
+- CS 447/CS 647/ECE 453: Software Testing, Quality Assurance, and Maintenance (Winter 2026)
 - SE 464: Software Architecture and Design (Fall 2024)
 - SE 465: Software Testing and Quality Assurance (Winter 2024)
 
