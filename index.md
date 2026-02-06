@@ -39,7 +39,9 @@ Julian Harty[^equal], **Haonan Zhang**[^equal], Lili Wei, Luca Pascarella, Maur√
 ## Service {#service}
 
 ### Program Committee
-- [ISSRE 2025 (Artifact Evaluation Track)](https://issre.github.io/2025/committee_artifact-evaluation-PC.html)
+- [FSE 2026 (Industry)](https://conf.researchr.org/committee/fse-2026/fse-2026-industry-papers-program-committee)
+- [FSE 2026 (Ideas, Visions and Reflections)](https://conf.researchr.org/committee/fse-2026/fse-2026-ideas-visions-and-reflections-program-committee)
+- [ISSRE 2025 (Artifact Evaluation)](https://issre.github.io/2025/committee_artifact-evaluation-PC.html)
 
 ### Journal Reviewer
 - TOSEM, IST
