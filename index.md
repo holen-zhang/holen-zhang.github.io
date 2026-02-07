@@ -19,7 +19,7 @@ In addition to my research, I am a research intern at [ERA Environmental Softwar
 
 ## Publications {#publications}
 
-**Haonan Zhang**, Kundi Yao, Zishuo Ding, Lizhi Liao, and Weiyi Shang. Who's to Blame? Rethinking the Brittleness of Automated Web GUI Testing from a Pragmatic Perspective. The 40th IEEE/ACM International Conference on Automated Software Engineering (ASE 2025). [LINK](https://ieeexplore.ieee.org/abstract/document/11334505)
+**Haonan Zhang**, Kundi Yao, Zishuo Ding, Lizhi Liao, and Weiyi Shang. Who's to Blame? Rethinking the Brittleness of Automated Web GUI Testing from a Pragmatic Perspective. The 40th IEEE/ACM International Conference on Automated Software Engineering (ASE 2025). [LINK](https://ieeexplore.ieee.org/document/11334505)
 
 An Chen, Kundi Yao, **Haonan Zhang**, Yiming Tang, and Weiyi Shang. An Empirical Study of Logging Practice in CUDA-based Deep Learning Systems. The 25th IEEE International Conference on Software Quality, Reliability, and Security (QRS 2025). [LINK](https://ieeexplore.ieee.org/document/11173505)
 
