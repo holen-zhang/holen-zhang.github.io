@@ -41,7 +41,7 @@ author:
       url: "https://scholar.google.com/citations?authuser=1&user=JLFoe7AAAAAJ" #
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
-      url: "mailto:haonan.zhang@uwaterloo.ca"
+      url: "haonan.zhang{aht}uwaterloo{doa}ca"
 
 # Defaults so pages use Minimal Mistakes layouts nicely
 defaults:
