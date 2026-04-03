@@ -24,7 +24,7 @@ paginate_path: "/page:num/"
 author:
   name: Haonan Zhang
   avatar: "/assets/images/profile.jpeg"
-  bio: "PhD candidate • Software Engineering"
+  bio: "PhD candidate • Software Engineering<br>Email: haonan.zhang [at] uwaterloo [dot] ca"
   location: "Canada"
   links:
     - label: "GitHub"
@@ -39,9 +39,9 @@ author:
     - label: "Google Scholar"
       icon: "fas fa-graduation-cap"
       url: "https://scholar.google.com/citations?authuser=1&user=JLFoe7AAAAAJ" #
-    - label: "haonan.zhang{aht}uwaterloo{doa}ca"
-      icon: "fas fa-fw fa-envelope"
-      url: "#"
+    # - label: "haonan.zhang{aht}uwaterloo{doa}ca"
+    #   icon: "fas fa-fw fa-envelope"
+    #   url: "#"
 
 # Defaults so pages use Minimal Mistakes layouts nicely
 defaults:
