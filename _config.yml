@@ -39,9 +39,9 @@ author:
     - label: "Google Scholar"
       icon: "fas fa-graduation-cap"
       url: "https://scholar.google.com/citations?authuser=1&user=JLFoe7AAAAAJ" #
-    - label: "Email"
+    - label: "haonan.zhang{aht}uwaterloo{doa}ca"
       icon: "fas fa-fw fa-envelope"
-      url: "haonan.zhang{aht}uwaterloo{doa}ca"
+      url: "#"
 
 # Defaults so pages use Minimal Mistakes layouts nicely
 defaults:
