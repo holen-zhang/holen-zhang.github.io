@@ -41,6 +41,7 @@ Julian Harty[^equal], **Haonan Zhang**[^equal], Lili Wei, Luca Pascarella, Maur√
 ## Service {#service}
 
 ### Program Committee
+- [ASE 2026 (Tools and Datasets)](https://conf.researchr.org/committee/ase-2026/ase-2026-tools-and-data-sets-program-committee)
 - [FSE 2026 (Industry)](https://conf.researchr.org/committee/fse-2026/fse-2026-industry-papers-program-committee)
 - [FSE 2026 (Ideas, Visions and Reflections)](https://conf.researchr.org/committee/fse-2026/fse-2026-ideas-visions-and-reflections-program-committee)
 - [ISSRE 2025 (Artifact Evaluation)](https://issre.github.io/2025/committee_artifact-evaluation-PC.html)
@@ -50,6 +51,7 @@ Julian Harty[^equal], **Haonan Zhang**[^equal], Lili Wei, Luca Pascarella, Maur√
 
 ### Student Volunteer
 - ICSE 2025
+- FSE 2026
 
 
 ## Teaching {#teaching}
